@@ -1,12 +1,14 @@
 {% load static %}
 <header>
     <figure>
+        <a href="{% url 'home' %}">
         <img src="{% static 'img/logo.png' %}" alt="Logo Comunities Techt Latam" 
             height="150" srcset="">
+        </a>
     </figure>
     <nav>
-        <a href="">About</a>
-        <a href="">Contanct</a>
-        <a href="">Events</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contanct</a>
+        <a href="{% url 'events' %}">Events</a>
     </nav>
 </header>
