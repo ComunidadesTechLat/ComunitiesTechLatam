@@ -6,10 +6,10 @@ from django.shortcuts import render
 from datetime import datetime
 
 def home(request):
-
-    return HttpResponse('HOME {now}'.format(
-        now=datetime.now().strftime('%dth %m %Y')
-        ))
+    context = {
+        'latest_community': "Comunity LAST Python",
+    }
+    return render(request, 'web/home.html', context)
 
 def about(request):
     return HttpResponse('About')
