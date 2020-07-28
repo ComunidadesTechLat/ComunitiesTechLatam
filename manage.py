@@ -5,8 +5,10 @@ import sys
 
 
 def main():
+    """Django's main function"""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ctlatam.settings')
     try:
+        # pylint: disable=C0415
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
