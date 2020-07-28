@@ -1,5 +1,5 @@
 venv/
 DJANGO_SECRET_KEY.env
 .vscode/
-ctlatam/__pycache__/
+*/__pycache__/
 db.sqlite3
