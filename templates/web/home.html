@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+{% block container %}
+<h1>HOME</h1>
+
+<a href="{% url 'community' latest_uuid%}">{{latest_community}}</a>
+{% endblock %}
