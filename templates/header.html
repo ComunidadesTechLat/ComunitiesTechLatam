@@ -1,12 +1,12 @@
 {% load static %}
-<header>
-    <figure>
+<header class="header-container container">
+    <figure class="header-container__logo">
         <a href="{% url 'home' %}">
         <img src="{% static 'img/logo.png' %}" alt="Logo Comunities Techt Latam" 
             height="150" srcset="">
         </a>
     </figure>
-    <nav>
+    <nav class="header-container__nav">
         <a href="{% url 'about' %}">About</a>
         <a href="{% url 'contact' %}">Contact</a>
         <a href="{% url 'events' %}">Events</a>

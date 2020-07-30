@@ -3,7 +3,9 @@
 Home
 {% endblock %}
 {% block container %}
-<h1>HOME</h1>
-
-<a href="{% url 'community' latest_uuid%}">{{latest_community}}</a>
+<section class="main-cointaier container">
+    <h1>HOME</h1>
+    
+    <a href="{% url 'community' latest_uuid%}">{{latest_community}}</a>
+</section>
 {% endblock %}
