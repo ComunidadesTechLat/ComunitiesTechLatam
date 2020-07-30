@@ -24,7 +24,23 @@ def community(request, id):
 
 def events(request):
     """Return HttpResponse of event"""
-    return render(request, 'web/events.html')
+    context = {
+        'categories': [
+            {
+                'name': 'Interface'
+            },
+            {
+                'name': 'Devops'
+            },
+            {
+                'name': 'UI/UX'
+            },
+            {
+                'name': 'Javascript'
+            },
+        ]
+    }
+    return render(request, 'web/events.html', context)
 
 def contact(request):
     """Return HttpResponse of contact"""

@@ -50,3 +50,27 @@ h1 {
 .footer-container {
     grid-area: footer;
 }
+.tags {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+.tags a {
+  line-height: 23px;
+  margin: 5px;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  color: #666666;
+  text-decoration: none;
+  background: var(--base-color-link);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dadada;
+  border-radius: 3px;
+}
+.tags a:active {
+    transform: translateY(1px);
+    border-color: var(--base-color-link);
+}
+  

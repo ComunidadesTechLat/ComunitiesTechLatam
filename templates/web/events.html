@@ -5,5 +5,10 @@ events
 {% block container %}
 <section class="main-cointaier container">
     <h1>Events</h1>
+    <div class="tags">
+        {% for categori in categories %}
+            <a href="#">{{ categori.name }}</a>
+        {% endfor %}
+    </div>
 </section>
 {% endblock %}
