@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 events
 {% endblock %}
 {% block container %}
 <section class="main-cointaier container">
     <h1>Events</h1>
+    <section class="community">
+        <img class="community__logo" src="{% static 'img/logo.png' %}" alt="Logo Comunities Techt Latam">
+        <article class="community__details">
+            <h3>Comunities Techt Latam</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tenetur natus consectetur similique quod ipsum ab incidunt, voluptatem vitae iste, consequuntur esse pariatur officiis quia nisi aperiam neque deleniti ullam.</p>
+        </article>
+        <img class="community__flag" src="https://restcountries.eu/data/mex.svg" alt="Logo Comunities Techt Latam">
+        <div class="community__media">
+            <a href="">Twiter</a>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+        </div>
+    </section>
     <div class="tags">
         {% for categori in categories %}
             <a href="#">{{ categori.name }}</a>
