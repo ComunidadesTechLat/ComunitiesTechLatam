@@ -95,7 +95,6 @@ class Country(models.Model):
         # pylint: disable=C0115,R0903
         verbose_name_plural = "Countries"
 
-
     LATAM_ISO_COUNTRIES = [
         ('BZ','Belice'),
         ('CR','Costa Rica'),
@@ -119,6 +118,7 @@ class Country(models.Model):
         ('VE','Venezuela'),
         ('MX','México'),
     ]
+    
     name = models.CharField(
         choices=LATAM_ISO_COUNTRIES,
         max_length=60,
