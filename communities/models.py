@@ -75,3 +75,66 @@ class Community (models.Model):
     
     def __str__(self):
         return self.name
+    
+
+class Category(models.Model):
+    """ Lists the avaliable categories  """
+    class Meta:
+        # pylint: disable=C0115,R0903
+        verbose_name_plural = "Categories"
+
+    name = models.CharField(max_length=60)
+
+    def __str__(self):
+        return self.name
+
+
+class Country(models.Model):
+    """ Lists the avaliable countries """
+    class Meta:
+        # pylint: disable=C0115,R0903
+        verbose_name_plural = "Countries"
+
+    name = models.CharField(max_length=60)
+
+    def __str__(self):
+        return self.name
+
+
+class Location(models.Model):
+    """ Saves the country and exact coordenates of a community """
+
+    community = models.OneToOneField(to='community', on_delete=models.CASCADE)
+    country = models.ForeignKey(
+        to='Country',
+        on_delete=models.SET_NULL,
+        null=True
+    )
+    latitude = models.FloatField(null=True)
+    longitude = models.FloatField(null=True)
+
+    def __str__(self):
+        if self.latitude and self.longitude:
+            return "{0}'s location:\n Country:{1}\n coord:{2},{3}".format(
+                self.community,
+                self.country,
+                self.latitude,
+                self.longitude
+            )
+
+        return "{0}'s location:\n Country:{1}".format(
+            self.community,
+            self.country
+        )
+
+
+class Flag(models.Model):
+    """ Lists the avaliable flags
+        for example 'Women only'
+    """
+
+    name = models.CharField(max_length=20)
+    icon = models.CharField(max_length=3)
+
+    def __str__(self):
+        return self.name
