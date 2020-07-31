@@ -9,7 +9,7 @@ from communities.models import Community
 class ComunityForm(forms.ModelForm):
     """ Community model form """
 
-    class Meta:
+    class Meta: # pylint: disable=too-few-public-methods
         """ Form settings """
         model = Community
         fields = ('name',
