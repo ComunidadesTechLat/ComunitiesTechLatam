@@ -9,7 +9,7 @@ body {
     padding: 0;
     display: grid;
     grid-gap: 5px;
-    grid-template: 100px 1fr 80px /  1fr;
+    grid-template: 100px 1fr 80px/  1fr;
     grid-template-areas: "header header"
                          "content content"
                          "footer footer";
@@ -47,7 +47,7 @@ h1 {
 .main-cointaier {
     grid-area: content;
     background-color: var(--base-color-background);
-    height: calc(100vh - 200px);;
+    height: 800px;
 }
 .footer-container {
     grid-area: footer;
@@ -76,4 +76,30 @@ h1 {
     transform: translateY(1px);
     border-color: var(--base-color-link);
 }
-  
+.community {
+    display: grid;
+    padding: 10px;
+    grid-template: 1fr 70px/ 150px 1fr 50px;
+    column-gap: 10px;
+    width: 500px;
+    grid-template-areas: "c_logo c_details c_flag"
+                         "c_medina c_medina c_medina";
+    border: 1px solid brown;
+}
+.community__logo {
+    height: 150px;
+    grid-area: c_logo;
+}
+.community__details {
+    grid-area: c_details;
+}
+.community__media {
+    grid-area: c_medina;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.community__flag {
+    height: 30px;
+    grid-area: c_flag;
+}
