@@ -20,9 +20,11 @@ events
         </div>
     </section>
     <div class="tags">
+        <a href="#">TODAS</a>
         {% for categori in categories %}
             <a href="#">{{ categori.name }}</a>
         {% endfor %}
+        <a href="#">+ OTROS</a>
     </div>
 </section>
 {% endblock %}

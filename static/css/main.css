@@ -5,6 +5,7 @@ html {
     --base-color: #0C0C0C;
     --dark-green: #01A86B;
     --light-green:#00E18F;
+    --box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 body {
     margin: 0;
@@ -90,24 +91,28 @@ body {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
-    width: 500px;
+    width: 600px;
   }
 .tags a {
+  font-size: 20px;
   line-height: 23px;
-  margin: 5px;
-  padding: 0 10px 0 10px;
+  margin: 10px;
+  padding: 5px 10px;
   font-size: 14px;
   color: #666666;
   text-decoration: none;
   background: var(--base-color-link);
-  border-width: 1px;
-  border-style: solid;
-  border-color: #dadada;
-  border-radius: 3px;
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  /* SHADOW 4 */
+  box-shadow:var(--box-shadow);
+  border-radius: 8px;
 }
 .tags a:active {
     transform: translateY(1px);
-    border-color: var(--base-color-link);
+    border-color: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);;
 }
 .community {
     display: grid;

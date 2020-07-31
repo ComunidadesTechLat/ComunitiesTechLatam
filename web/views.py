@@ -27,16 +27,52 @@ def events(request):
     context = {
         'categories': [
             {
-                'name': 'Interface'
+                'name': '💻 PROGRAMACIÓN'
             },
             {
-                'name': 'Devops'
+                'name': '🎨 DISEÑO | UI & UX'
             },
             {
-                'name': 'UI/UX'
+                'name': '🔐 CIBERSEGURIDAD'
             },
             {
-                'name': 'Javascript'
+                'name': '💸 BLOCKCHAIN'
+            },
+            {
+                'name': '🤖 IA | MACHINE LEARNING'
+            },
+            {
+                'name': '📉 DATA SCIENCE'
+            },
+            {
+                'name': '📊 MARKETING'
+            },
+            {
+                'name': '👾 VIDEOJUEGOS'
+            },
+            {
+                'name': '🚀 NEGOCIOS | EMPRENDIMIENTO'
+            },
+            {
+                'name': '💼 EMPLEO | RH'
+            },
+            {
+                'name': '📲 PRODUCTO '
+            },
+            {
+                'name': '📷 AUDIOVISUAL'
+            },
+            {
+                'name': '💎 NO CODE | LOW CODE'
+            },
+            {
+                'name': ' 🔧 MAKERS'
+            },
+            {
+                'name': '📈 TRADING'
+            },
+            {
+                'name': '👩🏻‍💻 MUJERES'
             },
         ]
     }
