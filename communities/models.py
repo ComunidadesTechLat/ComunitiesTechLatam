@@ -28,7 +28,12 @@ class Community(models.Model):
 
 
     #Location
-    country = models.CharField(max_length=50)
+    #country = models.CharField(max_length=50)
+    country = models.ForeignKey(
+        to="Country",
+        on_delete=models.SET_NULL,
+        null=True
+    )
     city = models.CharField(max_length=50, blank=True, null=True)
 
 
