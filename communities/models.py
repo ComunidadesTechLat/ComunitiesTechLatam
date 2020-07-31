@@ -28,12 +28,37 @@ class Community(models.Model):
 
 
     #Location
-    #country = models.CharField(max_length=50)
-    country = models.ForeignKey(
-        to="Country",
-        on_delete=models.SET_NULL,
-        null=True
+    """ Lists the avaliable countries """
+    LATAM_ISO_COUNTRIES = [
+        ('BZ', 'Belice'),
+        ('CR', 'Costa Rica'),
+        ('SV', 'El Salvador'),
+        ('GT', 'Guatemala'),
+        ('HN', 'Honduras'),
+        ('NI', 'Nicaragua'),
+        ('PA', 'Panamá'),
+        ('AR', 'Argentina'),
+        ('BO', 'Bolivia'),
+        ('BR', 'Brasil'),
+        ('CL', 'Chile'),
+        ('CO', 'Colombia'),
+        ('EC', 'Ecuador'),
+        ('GY', 'Guyana'),
+        ('GF', 'Guyana Francesa'),
+        ('PY', 'Paraguay'),
+        ('PE', 'Perú'),
+        ('SR', 'Suriname'),
+        ('UY', 'Uruguay'),
+        ('VE', 'Venezuela'),
+        ('MX', 'México'),
+    ]
+
+    country = models.CharField(
+        choices=LATAM_ISO_COUNTRIES,
+        max_length=60,
+        null=False,
     )
+
     city = models.CharField(max_length=50, blank=True, null=True)
 
 
@@ -87,45 +112,6 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=60)
-
-
-
-class Country(models.Model):
-    """ Lists the avaliable countries """
-    class Meta:
-        # pylint: disable=C0115,R0903
-        verbose_name_plural = "Countries"
-
-    LATAM_ISO_COUNTRIES = [
-        ('BZ', 'Belice'),
-        ('CR', 'Costa Rica'),
-        ('SV', 'El Salvador'),
-        ('GT', 'Guatemala'),
-        ('HN', 'Honduras'),
-        ('NI', 'Nicaragua'),
-        ('PA', 'Panamá'),
-        ('AR', 'Argentina'),
-        ('BO', 'Bolivia'),
-        ('BR', 'Brasil'),
-        ('CL', 'Chile'),
-        ('CO', 'Colombia'),
-        ('EC', 'Ecuador'),
-        ('GY', 'Guyana'),
-        ('GF', 'Guyana Francesa'),
-        ('PY', 'Paraguay'),
-        ('PE', 'Perú'),
-        ('SR', 'Suriname'),
-        ('UY', 'Uruguay'),
-        ('VE', 'Venezuela'),
-        ('MX', 'México'),
-    ]
-
-    name = models.CharField(
-        choices=LATAM_ISO_COUNTRIES,
-        max_length=60,
-        null=False,
-    )
-
 
 
 class Location(models.Model):
