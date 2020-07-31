@@ -1,3 +1,4 @@
+""" Communities admin config """
 # Django
 from django.contrib import admin
 
