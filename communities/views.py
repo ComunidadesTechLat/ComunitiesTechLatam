@@ -1,6 +1,5 @@
 ''' Community views '''
 #Django
-from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from django.urls import reverse_lazy
 
@@ -8,7 +7,7 @@ from django.urls import reverse_lazy
 from communities.forms import Community
 
 # Create your views here.
-class AddNewCommunity(FormView):
+class AddNewCommunity(FormView): # pylint: disable=too-many-ancestors
     """ Add a new community """
 
     template_name = 'community/new.html'
