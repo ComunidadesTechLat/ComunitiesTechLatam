@@ -56,7 +56,7 @@ class Community(models.Model):
     country = models.CharField(
         choices=LATAM_ISO_COUNTRIES,
         max_length=60,
-        null=False,
+        null=True,
     )
 
     city = models.CharField(max_length=50, blank=True, null=True)
@@ -112,20 +112,6 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=60)
-
-
-class Location(models.Model):
-    """ Saves the country and exact coordenates of a community """
-
-    community = models.OneToOneField(to='community', on_delete=models.CASCADE)
-    country = models.ForeignKey(
-        to='Country',
-        on_delete=models.SET_NULL,
-        null=True
-    )
-    latitude = models.FloatField(null=True)
-    longitude = models.FloatField(null=True)
-
 
 
 class Flag(models.Model):
