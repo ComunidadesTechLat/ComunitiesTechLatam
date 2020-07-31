@@ -1,3 +1,4 @@
+''' Community views '''
 #Django
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
@@ -7,7 +8,7 @@ from django.urls import reverse_lazy
 from communities.forms import Community
 
 # Create your views here.
-class add_new_community(FormView):
+class AddNewCommunity(FormView):
     """ Add a new community """
 
     template_name = 'community/new.html'

@@ -13,5 +13,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # Communities
-    path('community/new/', communities_views.add_new_community, name='add_new_community'),
+    path('community/new/', communities_views.AddNewCommunity, name='AddNewCommunity'),
 ]
