@@ -8,12 +8,12 @@ from communities.models import Community
 
 class ComunityForm(forms.ModelForm):
     """ Community model form """
-    
+
     class Meta:
         """ Form settings """
         model = Community
-        fields = ('name', 
-                  'logo', 
+        fields = ('name',
+                  'logo',
                   'description',
                   'q_members',
                   'web',
@@ -24,5 +24,5 @@ class ComunityForm(forms.ModelForm):
                   'github',
                   'country',
                   'city',
-                  'category'
+                  'category',
                   )
