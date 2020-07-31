@@ -14,8 +14,9 @@ class ComunityForm(forms.ModelForm):
         model = Community
         fields = ('name',
                   'logo',
+                  'img',
                   'description',
-                  'q_members',
+                  'quantity_of_members',
                   'web',
                   'email',
                   'fb_page',
