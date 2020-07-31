@@ -1,3 +1,5 @@
+''' Communities Tech Latam wsgi '''
+
 import os
 
 
