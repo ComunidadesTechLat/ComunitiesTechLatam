@@ -12,4 +12,9 @@ class AddNewCommunity(FormView): # pylint: disable=too-many-ancestors
 
     template_name = 'community/new.html'
     form_class = ComunityForm
-    success_url = reverse_lazy('/')
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        ''' Save a new Community '''
+        form.save()
+        return super().form_valid(form)
