@@ -11,8 +11,8 @@ class ReportAdmin(admin.ModelAdmin):
     """ Reports Admin """
 
     list_display = ('status', 'community_name', 'subject', 'description')
-    list_display_links = ('communiy_name')
-    list_editable = ('status')
+    list_display_links = ('community_name',)
+    list_editable = ('status',)
 
     search_fields = (
         'status',
