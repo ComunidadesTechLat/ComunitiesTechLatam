@@ -5,8 +5,8 @@ from django.db import models
 
 class Community(models.Model):
     """ Community Model """
-    #Display
-    display = models.BooleanField(default=False)
+
+    # uuid
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
 
