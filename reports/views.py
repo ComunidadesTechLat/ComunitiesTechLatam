@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 from reports.forms import UserReportForm
 
 
-class UserReport(FormView):
+class UserReport(FormView): # pylint: disable=too-many-ancestors
     """ Report a community """
 
     template_name = 'report.html'

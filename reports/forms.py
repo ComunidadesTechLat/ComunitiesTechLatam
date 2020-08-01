@@ -9,7 +9,7 @@ from reports.models import ReportModel
 class UserReportForm(forms.ModelForm):
     """ User Reports model form """
 
-    class Meta:
+    class Meta: # pylint: disable=too-few-public-methods
         """ Form settings """
         model = ReportModel
         fields = ('community_name',
