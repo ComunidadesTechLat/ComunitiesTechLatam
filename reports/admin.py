@@ -10,13 +10,13 @@ from reports.models import ReportModel
 class ReportAdmin(admin.ModelAdmin):
     """ Reports Admin """
 
-    list_display = ('status', 'community_name', 'subject', 'description')
+    list_display = ('report_status', 'community_name', 'subject', 'description')
     list_display_links = ('community_name',)
-    list_editable = ('status',)
+    list_editable = ('report_status',)
 
     search_fields = (
-        'status',
+        'report_status',
         'community_name'
     )
 
-    list_filter = ('status', 'created', 'modified')
+    list_filter = ('report_status', 'created', 'modified')
