@@ -7,6 +7,7 @@ from django.urls import path
 # Viewa
 from web import views as get_views
 from communities.views import AddNewCommunity
+from reports.views import UserReport
 
 
 urlpatterns = [
