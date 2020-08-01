@@ -6,7 +6,7 @@ from django import forms
 # Models
 from reports.models import ReportModel
 
-class UserReport(forms.ModelForm):
+class UserReportForm(forms.ModelForm):
     """ User Reports model form """
 
     class Meta:
