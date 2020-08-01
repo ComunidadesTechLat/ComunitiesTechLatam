@@ -80,8 +80,8 @@ class Community(models.Model):
     #Status
 
     STATUS_CHOICES = [
+        ('Revision', 'In revision'),
         ('Active', 'Active'),
-        ('Revision', 'In revision')
     ]
 
     status = models.CharField(

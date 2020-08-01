@@ -8,7 +8,7 @@ new
 
     <h1>Registra tu comunidad</h1>
 
-    <form method='POST'>
+    <form action="{% url 'new' %}"method='POST' enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
 
