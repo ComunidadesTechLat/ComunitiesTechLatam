@@ -24,5 +24,5 @@ urlpatterns = [
     path('community/new/', AddNewCommunity.as_view(template_name='community/new.html'), name='new'),
 
     # User Report
-    path('report/', UserReport.as_view(template_name='report.html'), name='report')
+    path('report/', UserReport.as_view(template_name='reports/report.html'), name='report')
 ]
