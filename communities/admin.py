@@ -10,9 +10,9 @@ from communities.models import Community, Category, Flag
 class CommunityAdmin(admin.ModelAdmin):
     """ Community Admin """
 
-    list_display = ('status', 'name', 'web', 'email', 'facebook_page', 'twitter', 'instagram', 'github', 'country')
+    list_display = ('status', 'name', 'category', 'web', 'facebook_page', 'github', 'country')
     list_display_links = ('name',)
-    list_editable = ('status', )
+    list_editable = ('status', 'category')
 
     search_fields = (
         'status',
@@ -30,4 +30,10 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Flag)
 class FlagAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'icon')
+    list_display_links = ('name',)
+    list_editable = ('icon',)
+
+    search_fields =(
+        'name',
+    )
