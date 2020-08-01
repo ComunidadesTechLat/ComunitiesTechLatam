@@ -18,3 +18,5 @@ class ReportAdmin(admin.ModelAdmin):
         'status',
         'community_name'
     )
+
+    list_filter = ('status', 'created', 'modified')
