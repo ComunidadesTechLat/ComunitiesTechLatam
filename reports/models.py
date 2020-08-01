@@ -11,7 +11,7 @@ class ReportModel(models.Model):
 
     community_name = models.CharField(max_length=255)
     subject = models.CharField(max_length=255)
-    Description = models.TextField()
+    description = models.TextField()
 
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now=True)
