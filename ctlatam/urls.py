@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from  web import views as get_views
+from web import views as get_views
 from communities import views as communities_views
 
 
