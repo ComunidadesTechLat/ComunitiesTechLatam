@@ -13,6 +13,18 @@ class ReportModel(models.Model):
     subject = models.CharField(max_length=255)
     description = models.TextField()
 
+    STATUS_CHOICES = [
+        ('Revision', 'In revision'),
+        ('Done', 'Done'),
+    ]
+
+    status = models.CharField(
+        choices=STATUS_CHOICES,
+        max_length=15,
+        null=False,
+        default='In revision'
+    )
+
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now=True)
 
