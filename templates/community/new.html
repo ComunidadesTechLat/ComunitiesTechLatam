@@ -8,6 +8,11 @@ new
 
     <h1>Registra tu comunidad</h1>
 
-    {{form.as_p}}
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+    </form>
 
 {% endblock %}
