@@ -1,12 +1,18 @@
 ''' Communities Tech Latam urls '''
 
+# Django
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
+# Viewa
 from web import views as get_views
-from communities import views as communities_views
+from communities.views import AddNewCommunity
 
 
 urlpatterns = [
+
+    # web
     path('', get_views.home, name='home'),
     path('about/', get_views.about, name='about'),
     path('events/', get_views.events, name='events'),
@@ -15,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Communities
-    path('community/new/', communities_views.AddNewCommunity, name='AddNewCommunity'),
+    path('community/new/', AddNewCommunity.as_view(template_name='community/new.html'), name='new'),
 ]
