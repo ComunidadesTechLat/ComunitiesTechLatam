@@ -25,15 +25,16 @@ class CommunityAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    """ Categories Admin """
 
 
 @admin.register(Flag)
 class FlagAdmin(admin.ModelAdmin):
+    """ Flags Admin """
     list_display = ('name', 'icon')
     list_display_links = ('name',)
     list_editable = ('icon',)
 
-    search_fields =(
+    search_fields = (
         'name',
     )
