@@ -3,7 +3,6 @@
 # Django
 from django.contrib import admin
 from django.urls import path
-from django.views.generic import TemplateView
 
 # Viewa
 from web import views as get_views

@@ -105,7 +105,7 @@ class Community(models.Model):
 
     #return the name of the community
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 
@@ -118,7 +118,7 @@ class Category(models.Model):
     name = models.CharField(max_length=60)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Flag(models.Model):
@@ -130,4 +130,4 @@ class Flag(models.Model):
     icon = models.CharField(max_length=3)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
