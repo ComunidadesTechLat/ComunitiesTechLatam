@@ -88,7 +88,7 @@ class Community(models.Model):
         choices=STATUS_CHOICES,
         max_length=15,
         null=False,
-        default='In revision'
+        default='Revison'
     )
 
 
@@ -102,6 +102,10 @@ class Community(models.Model):
 
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now=True)
+
+    #return the name of the community
+    def __str__(self):
+        return self.name
 
 
 
