@@ -12,7 +12,7 @@ class UserReportForm(forms.ModelForm):
     class Meta:
         """ Form settings """
         model = ReportModel
-        fields = ('communiy_name',
+        fields = ('community_name',
                   'subject',
                   'description',
                   )
