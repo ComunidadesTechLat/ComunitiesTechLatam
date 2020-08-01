@@ -7,6 +7,7 @@ from django.urls import path
 # Viewa
 from web import views as get_views
 from communities.views import AddNewCommunity
+from reports.views import UserReport
 
 
 urlpatterns = [
@@ -21,4 +22,7 @@ urlpatterns = [
 
     # Communities
     path('community/new/', AddNewCommunity.as_view(template_name='community/new.html'), name='new'),
+
+    # User Report
+    path('report/', UserReport.as_view(template_name='reports/report.html'), name='report')
 ]
