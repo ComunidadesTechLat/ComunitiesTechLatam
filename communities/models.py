@@ -13,15 +13,15 @@ class Community(models.Model):
     # Main Info
     name = models.CharField(max_length=255, unique=True)
     logo = models.ImageField(upload_to='communities/logos', blank=True, null=True)
-    img = models.ImageField(upload_to='communities/imgs', null=True, blank=True)
+    img = models.ImageField(upload_to='communities/imgs', blank=True, null=True)
     description = models.TextField()
     quantity_of_members = models.IntegerField(blank=True, null=True)
 
 
     #Contact
-    web = models.CharField(max_length=255, blank=True, null=True)
+    web = models.URLField(max_length=255, blank=True, null=True)
     email = models.EmailField(max_length=255, blank=True, null=True)
-    fb_page = models.URLField(blank=True, null=True)
+    facebook_page = models.URLField(blank=True, null=True)
     twitter = models.URLField(blank=True, null=True)
     instagram = models.URLField(blank=True, null=True)
     github = models.URLField(blank=True, null=True)

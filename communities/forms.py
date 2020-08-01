@@ -19,7 +19,7 @@ class ComunityForm(forms.ModelForm):
                   'quantity_of_members',
                   'web',
                   'email',
-                  'fb_page',
+                  'facebook_page',
                   'twitter',
                   'instagram',
                   'github',
