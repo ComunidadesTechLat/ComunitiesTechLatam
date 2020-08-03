@@ -9,7 +9,7 @@ class ReportModel(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
-    community_name = models.CharField(max_length=255)
+    community_name = models.CharField(max_length=255) #foreingKey de la tabla community
     subject = models.CharField(max_length=255)
     description = models.TextField()
 
