@@ -3,13 +3,14 @@
 import uuid
 from django.db import models
 
+from communities.models import Community
 
 class ReportModel(models.Model):
     """ Report Model """
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
-    community_name = models.CharField(max_length=255) #foreingKey de la tabla community
+    community_name = models.ForeignKey(Community, on_delete=models.CASCADE) #foreingKey de la tabla community
     subject = models.CharField(max_length=255)
     description = models.TextField()
 
