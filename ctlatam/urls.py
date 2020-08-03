@@ -25,4 +25,4 @@ urlpatterns = [
 
     # User Report
     path('report/', UserReport.as_view(template_name='reports/report.html'), name='report')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
