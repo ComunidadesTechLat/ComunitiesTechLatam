@@ -12,8 +12,8 @@ class Community(models.Model):
 
     # Main Info
     name = models.CharField(max_length=255, unique=True)
-    logo = models.ImageField(upload_to='communities/logos', blank=True, null=True)
-    img = models.ImageField(upload_to='communities/imgs', blank=True, null=True)
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
+    img = models.ImageField(upload_to='imgs/', blank=True, null=True)
     description = models.TextField()
     quantity_of_members = models.IntegerField(blank=True, null=True)
 
