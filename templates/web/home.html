@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Home
 {% endblock %}
 {% block container %}
-<h1>HOME</h1>
-
-<a href="{% url 'community' latest_uuid%}">{{latest_community}}</a>
+<section class="main-cointaier container">
+    <section class="intro">
+        <div class="intro-desc">
+            <h1 class="intro-desc__title">Comunidades de Tecnología <br> en Latinoamérica</h1>
+            <p class="intro-desc__info">Un directorio colaborativo sobre grupos, eventos y actividades <br> de tecnología en LATAM</p>
+            <p class="intro-desc__info container_black">Recopilamos una lista de <b>+ de 200 comunidades</b> para que explores y conectes <br> 
+                con personas con las que compartas algo en común.</p>
+        </div>
+        <img src="{% static 'img/friends.svg' %}" alt="Friends Joinig">
+    </section>
+</section>
 {% endblock %}

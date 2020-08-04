@@ -24,7 +24,59 @@ def community(request, id):
 
 def events(request):
     """Return HttpResponse of event"""
-    return render(request, 'web/events.html')
+    context = {
+        'categories': [
+            {
+                'name': '💻 PROGRAMACIÓN'
+            },
+            {
+                'name': '🎨 DISEÑO | UI & UX'
+            },
+            {
+                'name': '🔐 CIBERSEGURIDAD'
+            },
+            {
+                'name': '💸 BLOCKCHAIN'
+            },
+            {
+                'name': '🤖 IA | MACHINE LEARNING'
+            },
+            {
+                'name': '📉 DATA SCIENCE'
+            },
+            {
+                'name': '📊 MARKETING'
+            },
+            {
+                'name': '👾 VIDEOJUEGOS'
+            },
+            {
+                'name': '🚀 NEGOCIOS | EMPRENDIMIENTO'
+            },
+            {
+                'name': '💼 EMPLEO | RH'
+            },
+            {
+                'name': '📲 PRODUCTO '
+            },
+            {
+                'name': '📷 AUDIOVISUAL'
+            },
+            {
+                'name': '💎 NO CODE | LOW CODE'
+            },
+            {
+                'name': ' 🔧 MAKERS'
+            },
+            {
+                'name': '📈 TRADING'
+            },
+            {
+                'name': '👩🏻‍💻 MUJERES'
+            },
+        ]
+    }
+    return render(request, 'web/events.html', context)
 
 def contact(request):
     """Return HttpResponse of contact"""
