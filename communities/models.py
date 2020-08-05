@@ -100,7 +100,7 @@ class Community(models.Model):
 
     # DB info
 
-    created = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
     #return the name of the community
