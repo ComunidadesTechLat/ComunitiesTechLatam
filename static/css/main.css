@@ -72,6 +72,9 @@ body {
     align-items: flex-end;
     justify-content: space-between;
 }
+.footer__media {
+    display: flex;
+}
 /* UI */
 .intro {
     display: flex;
@@ -154,11 +157,16 @@ body {
 .community__media {
         display: flex;
 }
+.community__flag {
+    height: 15px;
+}
+
 .icon {
     display: block;
     width: 15px;
     height: 15px;
     margin: 2px;
+    background-repeat: no-repeat;
 }
 .icon-twitter {
     background-image: url("/static/img/tweet_icon.svg");
@@ -169,6 +177,18 @@ body {
 .icon-face {
     background-image: url("/static/img/tweet_icon.svg");
 }
-.community__flag {
-    height: 15px;
+.icon__footer-twitter {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_tweet_icon.svg");
+}
+.icon__footer-insta {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_insta_icon.svg");
+}
+.icon__footer-face {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_face_icon.svg");
 }
