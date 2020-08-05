@@ -58,7 +58,6 @@ body {
 .main-cointaier {
     grid-area: content;
     background-color: var(--base-color-background);
-    height: 800px;
 }
 .footer-container {
     grid-area: footer;
