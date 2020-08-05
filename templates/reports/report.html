@@ -5,7 +5,7 @@ Report
 {% endblock %}
 
 {% block container %}
-
+<section class="main-cointaier container">
     <h1>Aqui podras reportar una comunidad</h1>
 
     <form action="{% url 'report' %}" method='POST'>
@@ -15,5 +15,5 @@ Report
 
         <button type="submit">Submit</button>
     </form>
-
+</section>
 {% endblock %}
