@@ -5,7 +5,9 @@ html {
     --base-color: #0C0C0C;
     --dark-green: #01A86B;
     --light-green:#00E18F;
+    --light-gray: #CEC4C4;
     --box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+    --border-gray: 1px solid #CEC4C4;
   }
 body {
     margin: 0;
@@ -15,7 +17,130 @@ body {
     grid-template-areas: "header header"
                          "content content"
                          "footer footer";
-    background-color: rgba(0, 0, 0, 0.25);;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+/* FOMS and inputs*/
+form {
+    padding: 0 10px;
+}
+form p {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1em;
+}
+input, textarea, select, button  {
+    outline: none;
+    margin: 0;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type='text'],
+input[type='url'], 
+input[type='email'],
+input[type='number'],
+select,
+textarea {
+    width : 300px;
+    height: 35px;
+    margin-left: 5px;
+    background: #FFFFFF;
+    border: var(--border-gray);
+    box-sizing: border-box;
+    padding: 6px;
+    border-radius: 6px;
+}
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+select:focus,
+textarea:focus{
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    border: 1px solid var(--light-green);
+}
+select {
+    /* reset arrow*/
+  margin: 0;
+  margin-left: 5px;    
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, var(--light-gray), var(--light-gray));
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+select:focus {
+    background-image:
+        linear-gradient(45deg, var(--light-green) 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, var(--light-green) 50%),
+        linear-gradient(to right, var(--light-gray), var(--light-gray));
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+    outline: 0;
+}
+textarea {
+    height: 100px;
+}
+input[type='file'] {
+    width : 300;
+}
+input[type='file']::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+input[type='file']::before {
+    content: 'Select a file';
+    margin-left: 5px;
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: var(--border-gray);
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-size: 10pt;
+}
+input[type='file']:hover::before {
+    border-color: var(--light-green);
+}
+input[type='file']:active::before {
+    background: -webkit-linear-gradient(top, var(--light-green), var(--dark-green));
+}
+button[type='submit'] {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    color: white    ;
+    background: var(--base-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+button[type='submit']:hover {
+    cursor: pointer;
 }
 /* main sections */
 .container {
@@ -60,7 +185,6 @@ body {
 .main-cointaier {
     grid-area: content;
     background-color: var(--base-color-background);
-    height: 800px;
 }
 .footer-container {
     grid-area: footer;
@@ -75,6 +199,9 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+.footer__media {
+    display: flex;
 }
 /* UI */
 .intro {
@@ -158,11 +285,16 @@ body {
 .community__media {
         display: flex;
 }
+.community__flag {
+    height: 15px;
+}
+
 .icon {
     display: block;
     width: 15px;
     height: 15px;
     margin: 2px;
+    background-repeat: no-repeat;
 }
 .icon-twitter {
     background-image: url("/static/img/tweet_icon.svg");
@@ -173,6 +305,18 @@ body {
 .icon-face {
     background-image: url("/static/img/tweet_icon.svg");
 }
-.community__flag {
-    height: 15px;
+.icon__footer-twitter {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_tweet_icon.svg");
+}
+.icon__footer-insta {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_insta_icon.svg");
+}
+.icon__footer-face {
+    width: 41px;
+    height: 41px;
+    background-image: url("/static/img/footer_face_icon.svg");
 }

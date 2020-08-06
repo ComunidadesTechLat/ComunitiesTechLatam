@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
-new
+New
 {% endblock %}
 
 {% block container %}
-
-    <h1>Registra tu comunidad</h1>
+<section class="main-cointaier container">
 
     <form action="{% url 'new' %}" method='POST' enctype="multipart/form-data">
         {% csrf_token %}
@@ -15,5 +14,5 @@ new
 
         <button type="submit">Submit</button>
     </form>
-
+</section>
 {% endblock %}
