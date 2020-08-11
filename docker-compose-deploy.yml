@@ -6,8 +6,9 @@ services:
             context: .
         volumes:
             - static_data:/vol/web
+        env_file: 
+            - secret.env
         environment: 
-            - DJANGO_SECRET_KEY=secret
             - DEBUG=0
     
     proxy:
