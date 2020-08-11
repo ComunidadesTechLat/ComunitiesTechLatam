@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.getenv('DEBUG',1)))
+DEBUG = bool(int(os.getenv('DEBUG', '1')))
 
 ALLOWED_HOSTS = ['*']
 
@@ -147,3 +147,4 @@ if DEBUG:
     # Config for media files
     MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
     STATIC_ROOT = None
+    
