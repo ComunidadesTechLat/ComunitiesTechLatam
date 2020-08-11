@@ -1,7 +1,9 @@
 venv/
 DJANGO_SECRET_KEY.env
 .vscode/
-*/__pycache__/
+**/__pycache__/
 db.sqlite3
-migrations/
-media/
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+**/media/
