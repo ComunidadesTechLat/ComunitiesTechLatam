@@ -47,3 +47,13 @@ def events(request):
 def contact(request):
     """Return HttpResponse of contact"""
     return render(request, 'web/contact.html')
+
+def filtered_communities(request, category):
+    """Returns filtered communities by category"""
+    category=Category.objects.get(name=category)
+    communities=Community.objects.filter(category=category.id, status='Active')
+    context = {
+        'category': category.name,
+        'communities': communities,
+    }
+    return render(request, 'web/communities.html', context)
