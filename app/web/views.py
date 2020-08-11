@@ -50,10 +50,14 @@ def contact(request):
 
 def filtered_communities(request, category):
     """Returns filtered communities by category"""
-    category=Category.objects.get(name=category)
-    communities=Community.objects.filter(category=category.id, status='Active')
+    if category == 'all':
+        communities = Community.objects.filter(status='Active')
+    else:
+        category = Category.objects.get(name=category)
+        communities = Community.objects.filter(category=category.id, status='Active')
+        category = category.name
     context = {
-        'category': category.name,
+        'category': category,
         'communities': communities,
     }
     return render(request, 'web/communities.html', context)
