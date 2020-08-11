@@ -188,7 +188,7 @@ button[type='submit']:hover {
 }
 .footer-container {
     grid-area: footer;
-    background-image: url("/static/img/footer_bg.svg");
+    background-image: url("/static/static/img/footer_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
@@ -297,26 +297,26 @@ button[type='submit']:hover {
     background-repeat: no-repeat;
 }
 .icon-twitter {
-    background-image: url("/static/img/tweet_icon.svg");
+    background-image: url("/static/static/img/tweet_icon.svg");
 }
 .icon-insta {
-    background-image: url("/static/img/insta_icon.svg");
+    background-image: url("/static/static/img/insta_icon.svg");
 }
 .icon-face {
-    background-image: url("/static/img/tweet_icon.svg");
+    background-image: url("/static/static/img/tweet_icon.svg");
 }
 .icon__footer-twitter {
     width: 41px;
     height: 41px;
-    background-image: url("/static/img/footer_tweet_icon.svg");
+    background-image: url("/static/static/img/footer_tweet_icon.svg");
 }
 .icon__footer-insta {
     width: 41px;
     height: 41px;
-    background-image: url("/static/img/footer_insta_icon.svg");
+    background-image: url("/static/static/img/footer_insta_icon.svg");
 }
 .icon__footer-face {
     width: 41px;
     height: 41px;
-    background-image: url("/static/img/footer_face_icon.svg");
+    background-image: url("/static/static/img/footer_face_icon.svg");
 }

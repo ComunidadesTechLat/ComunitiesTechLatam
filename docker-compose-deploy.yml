@@ -8,7 +8,7 @@ services:
             - static_data:/vol/web
         environment: 
             - DJANGO_SECRET_KEY=secret
-            - ALLOWED_HOSTS= localhost
+            - DEBUG=0
     
     proxy:
         build:
@@ -16,7 +16,7 @@ services:
         volumes:
             - static_data:/vol/static
         ports:
-            - "8080:8080"
+            - "80:80"
         depends_on:
             - app
 
