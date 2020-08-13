@@ -223,18 +223,17 @@ button[type='submit']:hover {
 .tags {
     display: flex;
     overflow: hidden;
+    margin: auto;
     flex-wrap: wrap;
-    width: 600px;
+    width: 80%;
   }
 .tags a {
   font-size: 20px;
   line-height: 23px;
   margin: 10px;
   padding: 5px 10px;
-  font-size: 14px;
   color: #666666;
   text-decoration: none;
-  background: var(--base-color-link);
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
   box-sizing: border-box;
