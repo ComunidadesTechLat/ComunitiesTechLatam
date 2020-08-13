@@ -248,6 +248,7 @@ button[type='submit']:hover {
 .communities {
     display: flex;
     flex-wrap: wrap;
+    max-width: 700px;
 }
 .community {
     display: grid;
@@ -268,7 +269,9 @@ button[type='submit']:hover {
     border-radius: 15px 15px 0px 0px;
 }
 .community__logo img {
+    object-fit: scale-down;
     height: 100%;
+    width: 100%;
 }
 .community__details {
     grid-area: c_details;
