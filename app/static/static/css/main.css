@@ -401,4 +401,14 @@ button[type='submit']:hover {
         top: 50px;
         left: 350px;
     }
+    .about__container {
+        flex-direction: column;
+    }
+    .about__funny {
+        width: auto;
+        border-radius: 0 0 30px 30px;
+    }
+    .about__details {
+        width: auto;
+    }
  }
