@@ -269,13 +269,15 @@ button[type='submit']:hover {
     border-radius: 15px 15px 0px 0px;
 }
 .community__logo img {
-    object-fit: scale-down;
+    object-fit: fill;
+    border-radius: 15px 15px 0px 0px;
     height: 100%;
     width: 100%;
 }
 .community__details {
     grid-area: c_details;
     display: flex;  
+    justify-content: space-between;
     padding: 10px;
 }
 .community__details h3 {
