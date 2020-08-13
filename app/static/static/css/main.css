@@ -206,13 +206,12 @@ button[type='submit']:hover {
     display: flex;
 }
 .commnity_button {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     padding: 10px;
-    position: absolute;
+    position: relative;
     height: 43px;
-    left: 900px;
-    top: 800px;
+    left: 800px;
+    top: 50px;
     background: var(--base-color);
     box-shadow:var(--box-shadow);
     border-radius: 8px;
@@ -365,8 +364,12 @@ button[type='submit']:hover {
     background-image: url("/static/static/img/footer_face_icon.svg");
 }
 
-@media (max-width: 700px) { 
+@media only screen and (max-width: 900px) { 
     .intro{
         flex-direction: column;
+    }
+    .commnity_button {
+        top: 50px;
+        left: 350px;
     }
  }
