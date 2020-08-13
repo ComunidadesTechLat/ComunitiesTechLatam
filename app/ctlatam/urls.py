@@ -19,12 +19,12 @@ urlpatterns = [
     path('about/', get_views.about, name='about'),
     path('events/', get_views.events, name='events'),
     path('contact/', get_views.contact, name='contact'),
-    path('community/<uuid:id>', get_views.community, name='community'),
     path('admin/', admin.site.urls),
 
     # Communities
+    path('communities/<str:category>/', get_views.filtered_communities, name='filtered_categories'),
     path('community/new/', AddNewCommunity.as_view(template_name='community/new.html'), name='new'),
-
+    path('community/<uuid:id>', get_views.community, name='community'),
     # User Report
     path('report/', UserReport.as_view(template_name='reports/report.html'), name='report')
 
