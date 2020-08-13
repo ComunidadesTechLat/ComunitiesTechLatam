@@ -183,6 +183,10 @@ button[type='submit']:hover {
     font-weight: 800;
     color: var(--base-color);
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+.header-container__nav a:hover {
+    color: var(--light-green);
 }
 .main-cointaier {
     grid-area: content;
