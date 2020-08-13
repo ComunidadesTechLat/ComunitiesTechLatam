@@ -205,6 +205,28 @@ button[type='submit']:hover {
 .footer__media {
     display: flex;
 }
+.commnity_button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: absolute;
+    height: 43px;
+    left: 900px;
+    top: 800px;
+    background: var(--base-color);
+    box-shadow:var(--box-shadow);
+    border-radius: 8px;
+    color: var(--base-color-background);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+}
+.commnity_button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
 /* UI */
 .intro {
     display: flex;
