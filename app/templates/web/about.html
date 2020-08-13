@@ -5,7 +5,17 @@ About
 {% endblock %}
 {% block container %}
 <section class="main-cointaier container">
-    <h1>About</h1>
-    {{latest_community}}
+    <article class="about__container">
+        <div class="about__details">
+            <h2>COMUNIDADES TECH LATAM</h2>
+            <p>una plataforma que nace con el objetivo de ayudar a personas con intereses en diversas áreas de desarrollo, diseño,
+                <br>emprendimiento y en general en la industria de la tecnología a encontrar espacios donde puedan
+                <br>informarse, reunirse y ser parte de una o más comunidades activas de crecimiento profesional.
+            </p>
+        </div>
+        <div class="about__funny">
+            <img src="{% static 'img/funnie.png' %}" alt="community happy" 
+        </div>
+    </article>
 </section>
 {% endblock %}

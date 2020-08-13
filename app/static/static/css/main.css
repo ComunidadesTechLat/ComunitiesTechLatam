@@ -230,6 +230,30 @@ button[type='submit']:hover {
     transform: translateY(1px);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
+/* ABOUT*/
+.about__container {
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+}
+.about__details {
+    width: 50%;
+    padding: 80px;
+    border-radius: 30px 0  0 30px;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 27px;
+}
+.about__funny {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: var(--base-color);
+    border-radius: 0 30px  30px 0;
+}
 /* UI */
 .intro {
     display: flex;
