@@ -321,3 +321,9 @@ button[type='submit']:hover {
     height: 41px;
     background-image: url("/static/static/img/footer_face_icon.svg");
 }
+
+@media (min-width: 700px) { 
+    .intro{
+        flex-direction: column;
+    }
+ }
