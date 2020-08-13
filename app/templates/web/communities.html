@@ -20,10 +20,12 @@
             <div class="community__thirdpartys">
                 <img class="community__flag" src="https://restcountries.eu/data/{{community.country}}.svg" alt="Logo Comunities Techt Latam">
                 <div class="community__media">
-                
-                    <a href=""><i class="icon icon-twitter"></i></a>
-                    <a href=""><i class="icon icon-face"></i></a>
-                    <a href=""><i class="icon icon-insta"></i></a>
+                    {% if community.twitter %} <a href="{{community.twitter}}"><i class="icon icon-twitter"></i></a>{% endif %}
+                    {% if community.facebook_page %} <a href="{{community.facebook_page}}"><i class="icon icon-face"></i></a> {% endif %}
+                    {% if community.instagram %} <a href="{{community.instagram}}"><i class="icon icon-insta"></i></a> {% endif %}
+                    {% if community.web %} <a href="{{community.web}}"><i class="icon icon-web"></i></a> {% endif %}              
+                    {% if community.email %} <a href="{{community.email}}"><i class="icon icon-email"></i></a> {% endif %}                 
+                    {% if community.github %} <a href="{{community.github}}"><i class="icon icon-github"></i></a> {% endif %}
                 </div>
             </div>
         </article>

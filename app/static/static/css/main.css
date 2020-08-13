@@ -288,8 +288,10 @@ button[type='submit']:hover {
     font-size: 14px;
 }
 .community__thirdpartys{
+    width: 50px;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: space-between;
 }
@@ -315,6 +317,15 @@ button[type='submit']:hover {
 }
 .icon-face {
     background-image: url("/static/static/img/tweet_icon.svg");
+}
+.icon-web {
+    background-image: url("/static/static/img/insta_icon.svg");
+}
+.icon-email {
+    background-image: url("/static/static/img/insta_icon.svg");
+}
+.icon-github {
+    background-image: url("/static/static/img/insta_icon.svg");
 }
 .icon__footer-twitter {
     width: 41px;
