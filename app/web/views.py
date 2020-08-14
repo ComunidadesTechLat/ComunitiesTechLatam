@@ -21,7 +21,8 @@ def get_community_by_id(id):
 def home(request):
     """Return template home"""
     context = {
-        'latest_community': get_latest_community()
+        'latest_community': get_latest_community(),
+        'categories' : get_all_categories()
     }
     return render(request, 'web/home.html', context)
 

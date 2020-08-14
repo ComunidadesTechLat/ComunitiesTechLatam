@@ -5,27 +5,32 @@
 {% endblock %}
 {% block container %}
 <section class="main-cointaier container">
+    <h3>{{category}}</h3>
+    <div class="communities">
     {% for community in communities %}
     <section class="community">
         <div class="community__logo">
-            <img src="{% static 'img/logo.png' %}" alt="Logo Comunities Techt Latam">
+            <img src="/static/media/{{community.logo}}" alt="Logo Comunities Techt Latam">
         </div>
         <article class="community__details">
             <div>
                 <h3>{{ community.name }}</h3>
-                <p>{{ community.descrpition }}</p>
+                <p>{{ community.description }}</p>
             </div>
             <div class="community__thirdpartys">
-                <img class="community__flag" src="https://restcountries.eu/data/mex.svg" alt="Logo Comunities Techt Latam">
+                <img class="community__flag" src="https://restcountries.eu/data/{{community.country}}.svg" alt="Logo Comunities Techt Latam">
                 <div class="community__media">
-                
-                    <a href=""><i class="icon icon-twitter"></i></a>
-                    <a href=""><i class="icon icon-face"></i></a>
-                    <a href=""><i class="icon icon-insta"></i></a>
+                    {% if community.twitter %} <a href="{{community.twitter}}"><i class="icon icon-twitter"></i></a>{% endif %}
+                    {% if community.facebook_page %} <a href="{{community.facebook_page}}"><i class="icon icon-face"></i></a> {% endif %}
+                    {% if community.instagram %} <a href="{{community.instagram}}"><i class="icon icon-insta"></i></a> {% endif %}
+                    {% if community.web %} <a href="{{community.web}}"><i class="icon icon-web"></i></a> {% endif %}              
+                    {% if community.email %} <a href="{{community.email}}"><i class="icon icon-email"></i></a> {% endif %}                 
+                    {% if community.github %} <a href="{{community.github}}"><i class="icon icon-github"></i></a> {% endif %}
                 </div>
             </div>
         </article>
     </section>
     {% endfor %}
+    </div>
 </section>
 {% endblock %}

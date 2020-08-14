@@ -145,6 +145,6 @@ MEDIA_ROOT = '/vol/web/media'
 if DEBUG:
 
     # Config for media files
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media').replace("\\","/")
     STATIC_ROOT = None
     
