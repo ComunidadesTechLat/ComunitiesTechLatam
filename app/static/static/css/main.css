@@ -366,16 +366,16 @@ button[type='submit']:hover {
     background-image: url("/static/static/img/insta_icon.svg");
 }
 .icon-face {
-    background-image: url("/static/static/img/tweet_icon.svg");
+    background-image: url("/static/static/img/face_icon.svg");
 }
 .icon-web {
-    background-image: url("/static/static/img/insta_icon.svg");
+    background-image: url("/static/static/img/web_icon.svg");
 }
 .icon-email {
-    background-image: url("/static/static/img/insta_icon.svg");
+    background-image: url("/static/static/img/email_icon.svg");
 }
 .icon-github {
-    background-image: url("/static/static/img/insta_icon.svg");
+    background-image: url("/static/static/img/github_icon.svg");
 }
 .icon__footer-twitter {
     width: 41px;
