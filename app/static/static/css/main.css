@@ -41,6 +41,9 @@ body {
 /* FOMS and inputs*/
 form {
     padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 form p {
     display: flex;
@@ -157,6 +160,7 @@ button[type='submit'] {
     background: var(--base-color);
     box-shadow: var(--box-shadow);
     border-radius: 8px;
+    align-self: flex-end;
 }
 button[type='submit']:hover {
     cursor: pointer;
